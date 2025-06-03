@@ -3,12 +3,16 @@
 //Input (HTML) > procesar > PDF
 
 require_once '../../vendor/autoload.php';
+require_once '../../app/models/Mascota.php';
 
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 
 try {
+
+    $mascota = new Mascota();
+    $listaMascotas = $mascota->getAll();
 
     ob_start();
     include_once '../contents/content-reporte3.php';

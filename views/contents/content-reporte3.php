@@ -44,41 +44,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Firulais</td>
-          <td>Perro</td>
-          <td>Negro</td>
-          <td>Macho</td>
-          <td>Kelvin</td>
-        </tr>
-        
-        <tr>
-          <td>1</td>
-          <td>Firulais</td>
-          <td>Perro</td>
-          <td>Negro</td>
-          <td>Macho</td>
-          <td>Kelvin</td>
-        </tr>
 
+        <?php foreach($listaMascotas as $mascota): ?>
         <tr>
           <td>1</td>
-          <td>Firulais</td>
-          <td>Perro</td>
+          <td><?= $mascota['nombre'] ?></td>
+          <td><?= $mascota['Perro'] ?></td>
           <td>Negro</td>
           <td>Macho</td>
           <td>Kelvin</td>
         </tr>
-
-        <tr>
-          <td>1</td>
-          <td>Firulais</td>
-          <td>Perro</td>
-          <td>Negro</td>
-          <td>Macho</td>
-          <td>Kelvin</td>
-        </tr>
+        <?php endforeach ?>
       </tbody>
     </table>
 </body>
