@@ -46,14 +46,15 @@
       <tbody>
 
         <?php foreach($listaMascotas as $mascota): ?>
-        <tr>
-          <td>1</td>
-          <td><?= $mascota['nombre'] ?></td>
-          <td><?= $mascota['Perro'] ?></td>
-          <td>Negro</td>
-          <td>Macho</td>
-          <td>Kelvin</td>
-        </tr>
+      <tr>
+        <td><?= $mascota['idmascota'] ?></td>
+        <td><?= $mascota['nombre'] ?></td>
+        <td><?= $mascota['tipo'] ?></td>
+        <td><?= $mascota['color'] ?></td>
+        <td><?= $mascota['genero'] ?></td>
+        <td><?= $mascota['propietario'] ?></td>
+      </tr>
+
         <?php endforeach ?>
       </tbody>
     </table>

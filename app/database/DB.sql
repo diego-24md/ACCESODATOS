@@ -53,4 +53,19 @@ SELECT
   INNER JOIN propietarios PR ON ma.idpropietario = idpropietario
   ORDER BY MA.nombre;
 
+  CREATE TABLE personas (
+  idpersona INT AUTO_INCREMENT PRIMARY KEY,
+  nombres VARCHAR(100) NOT NULL,
+  apellidos VARCHAR(100) NOT NULL,
+  dni VARCHAR(15) NOT NULL UNIQUE,
+  email VARCHAR(100) NOT NULL UNIQUE
+);
+
+  INSERT INTO personas (nombres, apellidos, dni, email) VALUES
+('Juan', 'Pérez', '12345678', 'juan.perez@example.com'),
+('María', 'González', '87654321', 'maria.gonzalez@example.com'),
+('Carlos', 'Rodríguez', '11223344', 'carlos.rodriguez@example.com'),
+('Ana', 'Martínez', '44332211', 'ana.martinez@example.com');
+
+
 DELETE FROM mascotas WHERE idmascota = 6; --Para eliminar mascotas duplicadas (solo cambiar el ID)
